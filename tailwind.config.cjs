@@ -6,8 +6,15 @@ module.exports = {
 		fontFamily: {
 			'kanit': ['Kanit', 'sans-serif'],
 			'One-sans': ['One-sans', 'sans-serif'],
+			'barlow': ['Barlow', 'sans-serif'],
 		},
-		extend: {},
+		extend: {
+			colors: {
+				'dolar': '#2DCF57',
+				'dolar-palid': '#E4F4E8',
+				'dolar-dark': '#242424',
+			}
+		},
 	},
 	plugins: [],
 }
