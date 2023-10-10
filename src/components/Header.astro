@@ -1,0 +1,38 @@
+<header
+  class="bg-[#E4F4E8] flex justify-between items-center px-10 py-2 shadow-lg font-kanit fixed w-screen"
+>
+  <section class="flex-grow basis-0">
+    <img src="logo.png" alt="logo" class="max-w-[200px]" />
+  </section>
+  <ul class="flex [&>li]:mx-4 [&>li]:text-lg [&>li]:cursor-pointer">
+    <li class="hover:text-green-500 font-bold transition-all duration-300">
+      Nosotros
+    </li>
+    <li class="hover:text-green-500 font-bold transition-all duration-300">
+      Producto
+    </li>
+    <li class="hover:text-green-500 font-bold transition-all duration-300">
+      Contacto
+    </li>
+  </ul>
+  <section class="flex justify-end items-center flex-grow basis-0">
+    <button
+      class="hover:border-[#ffff00] duration-300 hover:bg-[#ffff00] active:translate-y-1 transition-colors border-2 hover:text-[#2DCF57] border-transparent p-2 rounded-lg flex justify-center items-center text-xl"
+      id="darkmode"
+    >
+      <ion-icon name="sunny-sharp" id="icon"></ion-icon>
+    </button>
+  </section>
+</header>
+
+<script>
+  const icons = ["sunny-sharp", "moon-sharp"];
+  const darkmode = document.getElementById("darkmode");
+  darkmode.addEventListener("click", () => {
+    const icon = document.getElementById("icon");
+    const currentIcon = icon.getAttribute("name");
+    const newIcon = currentIcon === icons[0] ? icons[1] : icons[0];
+    icon.setAttribute("name", newIcon);
+    document.body.classList.toggle("dark");
+  });
+</script>
